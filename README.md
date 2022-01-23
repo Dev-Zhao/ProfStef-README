@@ -240,7 +240,7 @@ ProfStef next.
 { (2+3) . (6*6) . 'hello', ' Stef'} size. "Output: 3, because the array is #(5 36 'hello Stef')"
 ```
 ```smalltalk
-{ ProfStef } first next.
+{ ProfStef } first next. "Same as ProfStef next."
 ```
 ---
 ### Message syntax: Unary messages (11/29)
@@ -269,4 +269,62 @@ Float pi. "Output: 3.141592653589793"
 "And of course:"
 ```smalltalk
 ProfStef next.
+```
+---
+### Message syntax: Binary messages (12/29)
+"Binary messages have the following form:
+    anObject + anotherObject"
+```smalltalk
+3 * 2. 6
+```
+```smalltalk
+Date today + 3 weeks. "Output: a Timespan(2022-02-13T00:00:00-05:00D1:00:00:00)"
+```
+```smalltalk
+false | false. "Output: false"
+```
+```smalltalk
+true & true. "Output: true"
+```
+```smalltalk
+true & false. "Output: false"
+```
+```smalltalk
+10 @ 100. "Output: (10@100)"
+```
+```smalltalk
+10 <= 12. "Output: true"
+```
+```smalltalk
+'ab', 'cd'. "Output: 'abcd'"
+```
+```smalltalk
+Date today < Date yesterday. "Output: false"
+```
+```smalltalk
+ProfStef next.
+```
+---
+### Message syntax: Keyword messages (13/29)
+"Keyword messages are messages with arguments. They have the following form:
+    anObject akey: anotherObject akey2: anotherObject2"
+```smalltalk
+4 between: 0 and: 10. "Output: true"
+```
+"The message is between:and: sent to the Number 4"
+```smalltalk
+1 max: 3. "Output: 3"
+```
+```smalltalk
+Color r:1 g:0 b:0. "Output: Color red"
+```
+"The message is r:g:b: implemented on class Color. Note you can also write"
+```smalltalk
+Color
+	r:1
+	g:1
+	b:0. "Output: Color yellow"
+```
+```smalltalk
+ProfStef perform: #next. "Same as ProfStef next."
 ```
