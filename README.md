@@ -550,3 +550,82 @@ Here we want to print all the numbers on the Transcript (a console)"
 ProfStef allInstances do: [:aPharoTutorial | aPharoTutorial next]. "Same as ProfStef next."
 ```
 ---
+### Instantiation (24/29)
+"Objects are instances of their class. Usually, we send the message #new to a class for creating an instance of this class.
+
+The message #allInstances sent to a class answers an Array with all instances of this class.
+
+For example, let's look at how many instances of SimpleButtonMorph exist. Please use only Do it or Print it on this page, not Inspect it."
+```smalltalk
+SimpleButtonMorph allInstances size.
+```
+"Now create a new instance of it:"
+```smalltalk
+SimpleButtonMorph new
+	label: 'A nice button';
+	openCenteredInWorld.
+```
+"See the button centered on the world? The list of all instances should contains one more instance:"
+```smalltalk
+SimpleButtonMorph allInstances size.
+```
+"Let's play with it:"
+```smalltalk
+SimpleButtonMorph allInstances last 
+	label: 'ProfStef is cooooool !';
+	color: Color cyan.
+```
+"Let's delete it and ask the system to clean the memory:"
+```smalltalk
+SimpleButtonMorph allInstances last delete.
+Smalltalk garbageCollect.
+SimpleButtonMorph allInstances size.
+```
+"Click on the button to go to next lesson:"
+```smalltalk
+SimpleButtonMorph new
+	label: 'Go to next lesson';
+	target: [ProfStef next. 
+			   SimpleButtonMorph allInstances last delete];
+	actionSelector: #value;
+	openCenteredInWorld.
+```
+---
+### Reflection (25/29)
+"You can inspect and change the system at runtime.
+
+Take a look at method #ifFalse:ifTrue: source code of class True:"
+```smalltalk
+(True>>#ifFalse:ifTrue:) sourceCode.
+```
+"Or just its comment:"
+```smalltalk
+(True>>#ifFalse:ifTrue:) comment.
+```
+"Here's all the methods I implement:"
+```smalltalk
+ProfStef selectors.
+```
+"Now let's create a new method to go to the next lesson:"
+```smalltalk
+ProfStef class compile:'goToNextLesson
+  self next'.
+```
+"Wow! I can't wait to use my new method!"
+```smalltalk
+ProfStef goToNextLesson.
+```
+---
+### Reflection Continued (26/29)
+"So cool, isn't it? Before going further, let's remove this method:"
+```smalltalk
+ProfStef respondsTo: #goToNextLesson.
+
+ProfStef class removeSelector: #goToNextLesson.
+
+ProfStef respondsTo: #goToNextLesson.
+```
+"Then move forward:"
+```smalltalk
+ProfStef default executeMethod: (ProfStef lookupSelector:#next). "Same as ProfStef next."
+```
