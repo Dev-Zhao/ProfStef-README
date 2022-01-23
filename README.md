@@ -491,7 +491,7 @@ Transcript open.
 
 3 > 10 
 	ifTrue: [Transcript show: 'Maybe there''s a bug ....']
-	ifFalse: [Transcript show: 'No: 3 is less than 10'].
+	ifFalse: [Transcript show: 'No: 3 is less than 10']. "Prints 'No: 3 is less than 10' on the Transcript"
 ```
 ```smalltalk
 3 = 3 ifTrue: [ProfStef next]. "Same as ProfStef next."
@@ -500,9 +500,9 @@ Transcript open.
 ### Loops (22/29)
 "Loops are high-level collection iterators, implemented as regular methods."
 
-"Basic loops:
-  to:do:
-  to:by:do:
+"Basic loops:\
+&nbsp;&nbsp;to:do:\
+&nbsp;&nbsp;to:by:do:
 "
 ```smalltalk
 1 to: 100 do: [:i | Transcript show: i asString; cr]. "Prints number 1-100 (inclusive) with a newline(cr) after each number on the Transcript"
@@ -516,3 +516,37 @@ Transcript open.
 ```smalltalk
 1 to: 1 do: [:i | ProfStef next]. "Same as ProfStef next." 
 ```
+---
+### Iterators (23/29)
+"The message do: is sent to a collection of objects (Array, Set, OrderedCollection), evaluating the block for each element.
+
+Here we want to print all the numbers on the Transcript (a console)"
+```smalltalk
+#(11 38 3 -2 10) do: [:each |
+     Transcript show: each printString; cr].
+```
+"Some other really nice iterators"
+```smalltalk
+#(11 38 3 -2 10) collect: [:each | each abs]. "Output: #(11 38 3 2 10)"
+```
+```smalltalk
+#(11 38 3 -2 10) collect: [:each | each odd]. "Output: #(true false true false false)"
+```
+```smalltalk
+#(11 38 3 -2 10) select: [:each | each odd]. "Output: #(11 3)"
+```
+```smalltalk
+#(11 38 3 -2 10) select: [:each | each > 10]. "Output: #(11 38)"
+```
+```smalltalk
+#(11 38 3 -2 10) reject: [:each | each > 10]. "Output: #(3 -2 10)"
+```
+```smalltalk
+#(11 38 3 -2 10) 
+     do: [:each | Transcript show: each printString]
+     separatedBy: [Transcript show: '.']. "Output: #(11 38 3 -2 10)"
+```
+```smalltalk
+ProfStef allInstances do: [:aPharoTutorial | aPharoTutorial next]. "Same as ProfStef next."
+```
+---
