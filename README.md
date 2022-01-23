@@ -429,3 +429,35 @@ Go back and use a cascade!"
 ProfStef previous.
 ```
 ---
+### Blocks (19/29)
+"Cascade is cool! Let's talk about blocks.
+
+Blocks are anonymous methods that can be stored into variables and executed on demand.
+
+Blocks are delimited by square brackets: []"
+```smalltalk
+[StPlayground open].
+```
+"does not open a Browser because the block is not executed.
+
+Here is a block that adds 2 to its argument (its argument is named x):"
+```smalltalk
+[:x | x+2].
+```
+"We can execute a block by sending it value messages."
+```smalltalk
+[:x | x+2] value: 5. "Output: 7"
+```
+```smalltalk
+[StPlayground open] value. "Opens Pharo playground"
+```
+```smalltalk
+[:x | x+2] value: 10. "Output: 12"
+```
+```smalltalk
+[:x :y| x + y] value:3 value:5. "Output: 8"
+```
+```smalltalk
+[ProfStef next] value. "Same as ProfStef next."
+```
+---
