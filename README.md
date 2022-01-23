@@ -90,6 +90,7 @@ Float pi.
 ```smalltalk
 SystemVersion current.
 ```
+![Inspecting System Version](/img/inspecting.jpg)
 ```smalltalk
 ProfStef next.
 ```
