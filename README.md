@@ -2,8 +2,8 @@
 Text version of Pharo ProfStef lessons
 
 # Table of Contents
-+ [Welcome (1/29)](#welcome--1-29-)
-+ [Doing (2/29)](#doing--2-29-)
++ [Welcome (1/29)](#welcome-129)
++ [Doing (2/29)](#doing-229)
 + [Printing (3/29)](#printing--3-29-)
 + [Inspecting (4/29)](#inspecting--4-29-)
 + [Basic Types: Numbers (5/29)](#basic-types--numbers--5-29-)
