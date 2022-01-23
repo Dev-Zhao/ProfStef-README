@@ -328,3 +328,43 @@ Color
 ```smalltalk
 ProfStef perform: #next. "Same as ProfStef next."
 ```
+### Message syntax: Execution order (14/29)
+"Unary messages are executed first, then binary messages and finally keyword messages:
+    Unary > Binary > Keywords"
+```smalltalk
+2 + 3 squared. "Output: 11"
+```
+```smalltalk
+2 raisedTo: 3 + 2. "Output: 32"
+```
+```smalltalk
+(0@0) class. "Output: Point"
+```
+```smalltalk
+0@0 corner: 100@200. "Output: (0@0) corner: (100@200)"
+```
+```smalltalk
+(0@0 corner: 100@200) class. "Output: Rectangle"
+```
+"Between messages of similar precedence, expressions are executed from left to right"
+```smalltalk
+-3 abs negated reciprocal. "Output: (-1/3)"
+```
+```smalltalk
+ProfStef next.
+```
+---
+### Message syntax: Parentheses (15/29)
+"Use parentheses to change order of evaluation"
+```smalltalk
+(2 + 3) squared. "Output: 25"
+```
+```smalltalk
+(2 raisedTo: 3) + 2. "Output: 10"
+```
+```smalltalk
+(0@0 extent: 100@200) bottomRight. "Output: (100@200)"
+```
+```smalltalk
+ProfStef next.
+```
