@@ -93,3 +93,67 @@ SystemVersion current.
 ```smalltalk
 ProfStef next.
 ```
+---
+### Basic Types: Numbers (5/29)
+"You now know how to execute Pharo code. 
+
+Now let's talk about basic objects.
+
+1, 2, 100, 2/3 ... are Numbers, and respond to many messages evaluating mathematical expressions.
+Evaluate these ones:"
+```smalltalk
+2. "Output: 2"
+```
+```smalltalk
+20 factorial. "Output: 2432902008176640000"
+```
+```smalltalk
+1000 factorial / 999 factorial. "Output: 1000"
+```
+```smalltalk 
+(1/3). "Output: (1/3)"
+```
+```smalltalk
+(1/3) + (4/5). "Output: (17/15)"
+```
+```smalltalk
+(1/3) asFloat. "Output: 0.3333333333333333"
+```
+```smalltalk
+1 class. "Output: SmallInteger"
+```
+```smalltalk
+1 class maxVal class. "Output: SmallInteger"
+```
+```smalltalk
+(1 class maxVal + 1) class. "Output: LargePositiveInteger"
+```
+```smalltalk
+ProfStef next.
+```
+---
+### Basic Types: Characters (6/29)
+"A Character can be instantiated using $ operator:"
+```smalltalk
+$A. "Output: $A"
+```
+```smalltalk
+$A class. "Output: Character"
+```
+```smalltalk
+$B charCode. "Output: 66"
+```
+```smalltalk
+Character cr. "Output: Character cr"
+```
+```smalltalk
+Character space. "Output: Character space"
+```
+"You can print all 256 characters of the ASCII extended set:"
+```smalltalk
+Character allByteCharacters. "Output: Characters Not supported on README"
+```
+```smalltalk
+ProfStef next.
+```
+---
