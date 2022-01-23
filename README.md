@@ -629,3 +629,21 @@ ProfStef respondsTo: #goToNextLesson.
 ```smalltalk
 ProfStef default executeMethod: (ProfStef lookupSelector:#next). "Same as ProfStef next."
 ```
+### Pharo environment (27/29)
+"Pharo is full of objects. There are windows, text, numbers, dates, colors, points and much more. You can interact with objects in a much more direct way than is possible with other programming languages.
+
+Every object understands the message 'inspect'. As a result, you get an Inspector window that shows details about the object."
+```smalltalk
+Date today inspect.
+````
+"This shows that the date object consists of a point in time (start) and a duration (one day long)."
+```smalltalk
+ProfStef inspect.
+```
+"You see, ProfStef class has a lot of objects. Let's take a look at my code:"
+```smalltalk
+ProfStef browse.
+```
+```smalltalk
+ProfStef next.
+```
