@@ -73,7 +73,9 @@ The Inspector is a tool that allows you to have a look inside an object.
 
 For example, select the text below, open the menu and click on 'Inspect it':"
 
+```smalltalk
 1 / 2.
+```
 
 "You've seen the keyboard keys next to the 'Inspect it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
 
