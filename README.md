@@ -242,3 +242,31 @@ ProfStef next.
 ```smalltalk
 { ProfStef } first next.
 ```
+---
+### Message syntax: Unary messages (11/29)
+"Messages are sent to objects. There are three types of message: unary, binary and keyword.
+
+Unary messages have the following form:
+    anObject aMessage 
+
+You've already sent unary messages. For example:"
+
+```smalltalk
+1 class. "Output: SmallInteger"
+```
+```smalltalk
+false not. "Output: true"
+```
+```smalltalk
+Time now. "Output: 4:07:28.931 pm"
+```
+```smalltalk
+Date today. "Output: 23 January 2022"
+```
+```smalltalk
+Float pi. "Output: 3.141592653589793"
+```
+"And of course:"
+```smalltalk
+ProfStef next.
+```
