@@ -4,25 +4,25 @@ Text version of Pharo ProfStef lessons
 ---
 ### Welcome (1/29)
 
-"Hello! I'm Professor Stef.
+Hello! I'm Professor Stef.
 
 You must want me to help you learn Pharo.
 
-So let's go to the first lesson. Select the text below, right-click and choose 'Do it'"
+So let's go to the first lesson. Select the text below, right-click and choose 'Do it'
 
 ```smalltalk
 ProfStef next.
 ```
 ---
 ### Doing (2/29)
-"Cool! (I like to say Cooool :) ). You've just executed a Pharo expression. More precisely, you sent the message 'next' to ProfStef class (it's me!).
+Cool! (I like to say Cooool :) ). You've just executed a Pharo expression. More precisely, you sent the message 'next' to ProfStef class (it's me!).
 
 Note you can run this tutorial again by evaluating: 'ProfStef go'. 
 'ProfStef previous' returns to the previous lesson.
 
 You can also Do it using the keyboard shortcut 'Ctrl + D' (or 'Cmd + D' on MacOS). 
 
-Try to evaluate these expressions:"
+Try to evaluate these expressions:
 
 ```smalltalk
 StPlayground open. "Opens Pharo code playground"
@@ -38,16 +38,16 @@ ProfStef next.
 ```
 ---
 ### Printing (3/29)
-"Now you're a Do it master! Let's talk about printing. It's a Do it which prints the result next to the expression you've selected.
-For example, select the text below, open the menu and click on 'Print it':"
+Now you're a Do it master! Let's talk about printing. It's a Do it which prints the result next to the expression you've selected.
+For example, select the text below, open the menu and click on 'Print it':
 
 ```smalltalk
 1 + 2. "Output: 3"
 ```
 
-"You've seen the keyboard keys next to the 'Print it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
+You've seen the keyboard keys next to the 'Print it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
 
-Try 'Ctrl + P' (or 'Cmd + P') on the following expressions:"
+Try 'Ctrl + P' (or 'Cmd + P') on the following expressions:
 
 ```smalltalk
 Date today. "Output: 23 January 2022"
@@ -57,7 +57,7 @@ Date today. "Output: 23 January 2022"
 Time now.  "Output: 3:35:27.581 pm"
 ```
 
-"The result is selected, so you can erase it using the backspace key. Try it!"
+The result is selected, so you can erase it using the backspace key. Try it!
 
 ```smalltalk
 SmalltalkImage current datedVersion. "Output: 'Pharo10.0.0 of 20 January 2022'"
@@ -68,7 +68,7 @@ ProfStef next.
 ```
 ---
 ### Inspecting (4/29)
-"Now you're a Do it and Print it master! Let's talk about inspecting. It's a Do it which opens an Inspector on the result of evaluating the expression you've selected. 
+Now you're a Do it and Print it master! Let's talk about inspecting. It's a Do it which opens an Inspector on the result of evaluating the expression you've selected. 
 The Inspector is a tool that allows you to have a look inside an object.
 
 For example, select the text below, open the menu and click on 'Inspect it':"
@@ -77,9 +77,9 @@ For example, select the text below, open the menu and click on 'Inspect it':"
 1 / 2.
 ```
 
-"You've seen the keyboard keys next to the 'Inspect it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
+You've seen the keyboard keys next to the 'Inspect it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
 
-Try 'Ctrl + I' (or 'Cmd + I') on the following expressions:"
+Try 'Ctrl + I' (or 'Cmd + I') on the following expressions:
 
 ```smalltalk
 DateAndTime today.
@@ -95,12 +95,13 @@ ProfStef next.
 ```
 ---
 ### Basic Types: Numbers (5/29)
-"You now know how to execute Pharo code. 
+You now know how to execute Pharo code. 
 
 Now let's talk about basic objects.
 
 1, 2, 100, 2/3 ... are Numbers, and respond to many messages evaluating mathematical expressions.
-Evaluate these ones:"
+
+Evaluate these ones:
 ```smalltalk
 2. "Output: 2"
 ```
@@ -133,7 +134,7 @@ ProfStef next.
 ```
 ---
 ### Basic Types: Characters (6/29)
-"A Character can be instantiated using $ operator:"
+A Character can be instantiated using $ operator:
 ```smalltalk
 $A. "Output: $A"
 ```
@@ -149,7 +150,7 @@ Character cr. "Output: Character cr"
 ```smalltalk
 Character space. "Output: Character space"
 ```
-"You can print all 256 characters of the ASCII extended set:"
+You can print all 256 characters of the ASCII extended set:
 ```smalltalk
 Character allByteCharacters.
 ```
@@ -158,7 +159,7 @@ ProfStef next.
 ```
 ---
 ### Basic Types: Strings (7/29)
-"A String is a collection of characters. Use single quotes to create a String object. Print these expressions:"
+A String is a collection of characters. Use single quotes to create a String object. Print these expressions:
 ```smalltalk
 'ProfStef'. "Output: 'ProfStef'"
 ```
@@ -171,11 +172,11 @@ ProfStef next.
 ```smalltalk
 'Hello World' reverse. "Output: 'dlroW olleH'"
 ```
-"You can access each character using at: message"
+You can access each character using at: message
 ```smalltalk
 'ProfStef' at: 1. "Output: $P"
 ```
-"String concatenation uses the comma operator:"
+String concatenation uses the comma operator:
 ```smalltalk
 'ProfStef', ' is cool'. "Output: 'ProfStef is cool'"
 ```
@@ -184,11 +185,11 @@ ProfStef next.
 ```
 ---
 ### Basic Types: Symbols (8/29)
-"A Symbol is a String which is guaranteed to be globally unique. 
+A Symbol is a String which is guaranteed to be globally unique. 
 
 There is one and only one Symbol #ProfStef. There may be several 'ProfStef' String objects.
 
-(Message == returns true if the two objects are the SAME)"
+(Message == returns true if the two objects are the SAME)
 ```smalltalk
 'ProfStef' asSymbol. "Output: #ProfStef"
 ```
@@ -206,7 +207,7 @@ There is one and only one Symbol #ProfStef. There may be several 'ProfStef' Stri
 ```
 ---
 ### Basic Types: Array (9/29)
-"Literal arrays are created at parse time and are read-only:"
+Literal arrays are created at parse time and are read-only:
 
 ```smalltalk
 #(1 2 3). "Output: #(1 2 3)"
@@ -223,7 +224,7 @@ There is one and only one Symbol #ProfStef. There may be several 'ProfStef' Stri
 ```smalltalk
 #('hello' 'World') at: 2. "Output: 'World'"
 ```
-"You can modify a copy"
+You can modify a copy
 ```smalltalk
 #('hello' 'World') copy at: 2 put: 'Pharo'; yourself. "Output: #('hello' 'Pharo')"
 ```
@@ -232,7 +233,7 @@ ProfStef next.
 ```
 ---
 ### Basic Types: Dynamic Array (10/29)
-"Dynamic Arrays are created at execution time:"
+Dynamic Arrays are created at execution time:
 ```smalltalk
 { (2+3) . (6*6) }. "Output: #(5 36)"
 ```
@@ -244,12 +245,12 @@ ProfStef next.
 ```
 ---
 ### Message syntax: Unary messages (11/29)
-"Messages are sent to objects. There are three types of message: unary, binary and keyword.
+Messages are sent to objects. There are three types of message: unary, binary and keyword.
 
 Unary messages have the following form:
     anObject aMessage 
 
-You've already sent unary messages. For example:"
+You've already sent unary messages. For example:
 
 ```smalltalk
 1 class. "Output: SmallInteger"
@@ -266,14 +267,14 @@ Date today. "Output: 23 January 2022"
 ```smalltalk
 Float pi. "Output: 3.141592653589793"
 ```
-"And of course:"
+And of course:
 ```smalltalk
 ProfStef next.
 ```
 ---
 ### Message syntax: Binary messages (12/29)
-"Binary messages have the following form:
-    anObject + anotherObject"
+Binary messages have the following form:
+    anObject + anotherObject
 ```smalltalk
 3 * 2. 6
 ```
@@ -306,8 +307,8 @@ ProfStef next.
 ```
 ---
 ### Message syntax: Keyword messages (13/29)
-"Keyword messages are messages with arguments. They have the following form:
-    anObject akey: anotherObject akey2: anotherObject2"
+Keyword messages are messages with arguments. They have the following form:
+    anObject akey: anotherObject akey2: anotherObject2
 ```smalltalk
 4 between: 0 and: 10. "Output: true"
 ```
@@ -318,7 +319,7 @@ ProfStef next.
 ```smalltalk
 Color r:1 g:0 b:0. "Output: Color red"
 ```
-"The message is r:g:b: implemented on class Color. Note you can also write"
+The message is r:g:b: implemented on class Color. Note you can also write
 ```smalltalk
 Color
 	r:1
@@ -329,8 +330,8 @@ Color
 ProfStef perform: #next. "Same as ProfStef next."
 ```
 ### Message syntax: Execution order (14/29)
-"Unary messages are executed first, then binary messages and finally keyword messages:
-    Unary > Binary > Keywords"
+Unary messages are executed first, then binary messages and finally keyword messages:
+    Unary > Binary > Keywords
 ```smalltalk
 2 + 3 squared. "Output: 11"
 ```
@@ -346,7 +347,7 @@ ProfStef perform: #next. "Same as ProfStef next."
 ```smalltalk
 (0@0 corner: 100@200) class. "Output: Rectangle"
 ```
-"Between messages of similar precedence, expressions are executed from left to right"
+Between messages of similar precedence, expressions are executed from left to right
 ```smalltalk
 -3 abs negated reciprocal. "Output: (-1/3)"
 ```
@@ -355,7 +356,7 @@ ProfStef next.
 ```
 ---
 ### Message syntax: Parentheses (15/29)
-"Use parentheses to change order of evaluation"
+Use parentheses to change order of evaluation
 ```smalltalk
 (2 + 3) squared. "Output: 25"
 ```
@@ -370,13 +371,13 @@ ProfStef next.
 ```
 ---
 ### Mathematical Precendence (16/29)
-"Traditional precedence rules from mathematics do not apply in Pharo."
+Traditional precedence rules from mathematics do not apply in Pharo.
 ```smalltalk
 2 * 10 + 2. "Output: 22"
 ```
-"Here the message * is sent to 2, which answers 20, then 20 receive the message +
+Here the message * is sent to 2, which answers 20, then 20 receive the message +
 
-Remember that all messages always follow a simple left-to-right precedence rule, * without exceptions *."
+Remember that all messages always follow a simple left-to-right precedence rule, * without exceptions *.
 ```smalltalk
 2 + 2 * 10. "Output: 40"
 ```
@@ -397,9 +398,9 @@ ProfStef next.
 ```
 ---
 ### Message syntax: cascade (17/29)
-"; is the cascade operator. It's useful to send message to the SAME receiver.
+`;` is the cascade operator. It's useful to send message to the SAME receiver.
 
-Open a Transcript (console):"
+Open a Transcript (console):
 ```smalltalk
 Transcript open.
 ```
@@ -416,35 +417,35 @@ Transcript
 	   show: 'Pharo' ;
 	   cr.
 ```
-"Try to go to the next lesson with a cascade of two 'next' messages:"
+Try to go to the next lesson with a cascade of two 'next' messages:
 ```smalltalk
 ProfStef next; next.
 ```
 ---
 ### LOST? (18/29)
-"Hey, you should not be here!! 
+Hey, you should not be here!! 
 
-Go back and use a cascade!"
+Go back and use a cascade!
 ```smalltalk
 ProfStef previous.
 ```
 ---
 ### Blocks (19/29)
-"Cascade is cool! Let's talk about blocks.
+Cascade is cool! Let's talk about blocks.
 
 Blocks are anonymous methods that can be stored into variables and executed on demand.
 
-Blocks are delimited by square brackets: []"
+Blocks are delimited by square brackets: `[]`
 ```smalltalk
 [StPlayground open].
 ```
-"does not open a Browser because the block is not executed.
+does not open a Browser because the block is not executed.
 
-Here is a block that adds 2 to its argument (its argument is named x):"
+Here is a block that adds 2 to its argument (its argument is named x):
 ```smalltalk
 [:x | x+2].
 ```
-"We can execute a block by sending it value messages."
+We can execute a block by sending it value messages.
 ```smalltalk
 [:x | x+2] value: 5. "Output: 7"
 ```
@@ -462,11 +463,11 @@ Here is a block that adds 2 to its argument (its argument is named x):"
 ```
 ---
 ### Block assignation (20/29)
-"Blocks can be assigned to a variable then executed later.
+Blocks can be assigned to a variable then executed later.
 
-Note that |b| is the declaration of a variable named 'b' and that ':=' assigns a value to a variable.
+Note that `|b|` is the declaration of a variable named 'b' and that ':=' assigns a value to a variable.
 
-Select the three lines then Print it:"
+Select the three lines then Print it:
 ```smalltalk
 |b|
 b := [:x | x+2].
@@ -477,15 +478,15 @@ ProfStef next.
 ```
 ---
 ### Conditionals (21/29)
-"Conditionals are just messages sent to Boolean objects"
+Conditionals are just messages sent to Boolean objects
 ```smalltalk
 1 < 2
   ifTrue: [100]
   ifFalse: [42]. "Output: 100"
 ```
-"Here the message is ifTrue:ifFalse:
+Here the message is `ifTrue:ifFalse:`
 
-Try this:"
+Try this:
 ```smalltalk
 Transcript open.
 
@@ -498,12 +499,12 @@ Transcript open.
 ```
 ---
 ### Loops (22/29)
-"Loops are high-level collection iterators, implemented as regular methods."
+Loops are high-level collection iterators, implemented as regular methods.
 
-"Basic loops:\
-&nbsp;&nbsp;to:do:\
-&nbsp;&nbsp;to:by:do:
-"
+Basic loops:\
+&nbsp;&nbsp;`to:do:`\
+&nbsp;&nbsp;`to:by:do:`
+
 ```smalltalk
 1 to: 100 do: [:i | Transcript show: i asString; cr]. "Prints number 1-100 (inclusive) with a newline(cr) after each number on the Transcript"
 ```
@@ -518,14 +519,14 @@ Transcript open.
 ```
 ---
 ### Iterators (23/29)
-"The message do: is sent to a collection of objects (Array, Set, OrderedCollection), evaluating the block for each element.
+The message do: is sent to a collection of objects (Array, Set, OrderedCollection), evaluating the block for each element.
 
-Here we want to print all the numbers on the Transcript (a console)"
+Here we want to print all the numbers on the Transcript (a console)
 ```smalltalk
 #(11 38 3 -2 10) do: [:each |
      Transcript show: each printString; cr].
 ```
-"Some other really nice iterators"
+Some other really nice iterators
 ```smalltalk
 #(11 38 3 -2 10) collect: [:each | each abs]. "Output: #(11 38 3 2 10)"
 ```
@@ -551,37 +552,37 @@ ProfStef allInstances do: [:aPharoTutorial | aPharoTutorial next]. "Same as Prof
 ```
 ---
 ### Instantiation (24/29)
-"Objects are instances of their class. Usually, we send the message #new to a class for creating an instance of this class.
+Objects are instances of their class. Usually, we send the message #new to a class for creating an instance of this class.
 
 The message #allInstances sent to a class answers an Array with all instances of this class.
 
-For example, let's look at how many instances of SimpleButtonMorph exist. Please use only Do it or Print it on this page, not Inspect it."
+For example, let's look at how many instances of SimpleButtonMorph exist. Please use only Do it or Print it on this page, not Inspect it.
 ```smalltalk
 SimpleButtonMorph allInstances size.
 ```
-"Now create a new instance of it:"
+Now create a new instance of it:
 ```smalltalk
 SimpleButtonMorph new
 	label: 'A nice button';
 	openCenteredInWorld.
 ```
-"See the button centered on the world? The list of all instances should contains one more instance:"
+See the button centered on the world? The list of all instances should contains one more instance:
 ```smalltalk
 SimpleButtonMorph allInstances size.
 ```
-"Let's play with it:"
+Let's play with it:
 ```smalltalk
 SimpleButtonMorph allInstances last 
 	label: 'ProfStef is cooooool !';
 	color: Color cyan.
 ```
-"Let's delete it and ask the system to clean the memory:"
+Let's delete it and ask the system to clean the memory:
 ```smalltalk
 SimpleButtonMorph allInstances last delete.
 Smalltalk garbageCollect.
 SimpleButtonMorph allInstances size.
 ```
-"Click on the button to go to next lesson:"
+Click on the button to go to next lesson:
 ```smalltalk
 SimpleButtonMorph new
 	label: 'Go to next lesson';
@@ -592,32 +593,32 @@ SimpleButtonMorph new
 ```
 ---
 ### Reflection (25/29)
-"You can inspect and change the system at runtime.
+You can inspect and change the system at runtime.
 
-Take a look at method #ifFalse:ifTrue: source code of class True:"
+Take a look at method #ifFalse:ifTrue: source code of class True:
 ```smalltalk
 (True>>#ifFalse:ifTrue:) sourceCode.
 ```
-"Or just its comment:"
+Or just its comment:
 ```smalltalk
 (True>>#ifFalse:ifTrue:) comment.
 ```
-"Here's all the methods I implement:"
+Here's all the methods I implement:
 ```smalltalk
 ProfStef selectors.
 ```
-"Now let's create a new method to go to the next lesson:"
+Now let's create a new method to go to the next lesson:
 ```smalltalk
 ProfStef class compile:'goToNextLesson
   self next'.
 ```
-"Wow! I can't wait to use my new method!"
+Wow! I can't wait to use my new method!
 ```smalltalk
 ProfStef goToNextLesson.
 ```
 ---
 ### Reflection Continued (26/29)
-"So cool, isn't it? Before going further, let's remove this method:"
+So cool, isn't it? Before going further, let's remove this method:
 ```smalltalk
 ProfStef respondsTo: #goToNextLesson.
 
@@ -625,22 +626,22 @@ ProfStef class removeSelector: #goToNextLesson.
 
 ProfStef respondsTo: #goToNextLesson.
 ```
-"Then move forward:"
+Then move forward:
 ```smalltalk
 ProfStef default executeMethod: (ProfStef lookupSelector:#next). "Same as ProfStef next."
 ```
 ### Pharo environment (27/29)
-"Pharo is full of objects. There are windows, text, numbers, dates, colors, points and much more. You can interact with objects in a much more direct way than is possible with other programming languages.
+Pharo is full of objects. There are windows, text, numbers, dates, colors, points and much more. You can interact with objects in a much more direct way than is possible with other programming languages.
 
-Every object understands the message 'inspect'. As a result, you get an Inspector window that shows details about the object."
+Every object understands the message 'inspect'. As a result, you get an Inspector window that shows details about the object.
 ```smalltalk
 Date today inspect.
 ````
-"This shows that the date object consists of a point in time (start) and a duration (one day long)."
+This shows that the date object consists of a point in time (start) and a duration (one day long).
 ```smalltalk
 ProfStef inspect.
 ```
-"You see, ProfStef class has a lot of objects. Let's take a look at my code:"
+You see, ProfStef class has a lot of objects. Let's take a look at my code:
 ```smalltalk
 ProfStef browse.
 ```
@@ -649,27 +650,27 @@ ProfStef next.
 ```
 ---
 ### Debugger (28/29)
-"The Debugger may be the most famous tool of Smalltalk environments. It will open as soon as an unmanaged Exception occurs. 
+The Debugger may be the most famous tool of Smalltalk environments. It will open as soon as an unmanaged Exception occurs. 
 
-The following code will open the debugger on the message stack, select PharoSyntaxTutorial>>divideTwoByZero".
+The following code will open the debugger on the message stack, select PharoSyntaxTutorial>>divideTwoByZero
 ```smalltalk
 PharoSyntaxTutorial new divideTwoByZero.
 ```
 ---
 ### Tutorial Done (29/29)
-"This tutorial is done. Enjoy programming with Pharo. 
+This tutorial is done. Enjoy programming with Pharo. 
 
 Don't forget to read 'Pharo By Example' found here:  
 
 	https://books.pharo.org/updated-pharo-by-example
 
-You can run this tutorial again by evaluating:"
+You can run this tutorial again by evaluating:
 ```smalltalk
 ProfStef go.
 ```
-"Do you want to create your own interactive tutorial with ProfStef? That's very easy!! How? There's a ProfStef interactive tutorial for that :D
-Just evaluate the following code:"
+Do you want to create your own interactive tutorial with ProfStef? That's very easy!! How? There's a ProfStef interactive tutorial for that :D
+Just evaluate the following code:
 ```smalltalk
 ProfStef goOn: HowToMakeYourOwnTutorial
 ```
-"See you soon!"
+See you soon!
