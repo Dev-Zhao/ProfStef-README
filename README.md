@@ -204,3 +204,30 @@ There is one and only one Symbol #ProfStef. There may be several 'ProfStef' Stri
 ```smalltalk
 (Smalltalk globals at: #ProfStef) next. "Same as ProfStef next."
 ```
+---
+### Basic Types: Array (9/29)
+"Literal arrays are created at parse time and are read-only:"
+
+```smalltalk
+#(1 2 3). "Output: #(1 2 3)"
+```
+```smalltalk
+#(1 2 3 #(4 5 6)) size. "Output: 4"
+```
+```smalltalk
+#(1 2 4) isEmpty. "Output: false"
+```
+```smalltalk
+#(1 2 3) first. "Output: 1"
+```
+```smalltalk
+#('hello' 'World') at: 2. "Output: 'World'"
+```
+"You can modify a copy"
+```smalltalk
+#('hello' 'World') copy at: 2 put: 'Pharo'; yourself. "Output: #('hello' 'Pharo')"
+```
+```
+ProfStef next.
+```
+
