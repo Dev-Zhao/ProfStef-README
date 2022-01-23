@@ -1,6 +1,5 @@
 # ProfStef-README
 Text version of Pharo ProfStef lessons
-
 ---
 ### Welcome (1/29)
 
