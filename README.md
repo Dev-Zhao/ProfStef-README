@@ -647,3 +647,29 @@ ProfStef browse.
 ```smalltalk
 ProfStef next.
 ```
+---
+### Debugger (28/29)
+"The Debugger may be the most famous tool of Smalltalk environments. It will open as soon as an unmanaged Exception occurs. 
+
+The following code will open the debugger on the message stack, select PharoSyntaxTutorial>>divideTwoByZero".
+```smalltalk
+PharoSyntaxTutorial new divideTwoByZero.
+```
+---
+### Tutorial Done (29/29)
+"This tutorial is done. Enjoy programming with Pharo. 
+
+Don't forget to read 'Pharo By Example' found here:  
+
+	https://books.pharo.org/updated-pharo-by-example
+
+You can run this tutorial again by evaluating:"
+```smalltalk
+ProfStef go.
+```
+"Do you want to create your own interactive tutorial with ProfStef? That's very easy!! How? There's a ProfStef interactive tutorial for that :D
+Just evaluate the following code:"
+```smalltalk
+ProfStef goOn: HowToMakeYourOwnTutorial
+```
+"See you soon!"
