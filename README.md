@@ -227,7 +227,18 @@ There is one and only one Symbol #ProfStef. There may be several 'ProfStef' Stri
 ```smalltalk
 #('hello' 'World') copy at: 2 put: 'Pharo'; yourself. "Output: #('hello' 'Pharo')"
 ```
-```
+```smalltalk
 ProfStef next.
 ```
-
+---
+### Basic Types: Dynamic Array (10/29)
+"Dynamic Arrays are created at execution time:"
+```smalltalk
+{ (2+3) . (6*6) }. "Output: #(5 36)"
+```
+```smalltalk
+{ (2+3) . (6*6) . 'hello', ' Stef'} size. "Output: 3, because the array is #(5 36 'hello Stef')"
+```
+```smalltalk
+{ ProfStef } first next.
+```
