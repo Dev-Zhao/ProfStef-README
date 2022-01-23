@@ -559,7 +559,7 @@ The message #allInstances sent to a class answers an Array with all instances of
 
 For example, let's look at how many instances of SimpleButtonMorph exist. Please use only Do it or Print it on this page, not Inspect it.
 ```smalltalk
-SimpleButtonMorph allInstances size.
+SimpleButtonMorph allInstances size. "Output: 0"
 ```
 Now create a new instance of it:
 ```smalltalk
@@ -569,7 +569,7 @@ SimpleButtonMorph new
 ```
 See the button centered on the world? The list of all instances should contains one more instance:
 ```smalltalk
-SimpleButtonMorph allInstances size.
+SimpleButtonMorph allInstances size. "Output: 1"
 ```
 Let's play with it:
 ```smalltalk
@@ -592,6 +592,7 @@ SimpleButtonMorph new
 	actionSelector: #value;
 	openCenteredInWorld.
 ```
+![Instantiation](src/instantiation.jpg)
 ---
 ### Reflection (25/29)
 You can inspect and change the system at runtime.
