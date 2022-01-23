@@ -592,7 +592,7 @@ SimpleButtonMorph new
 	actionSelector: #value;
 	openCenteredInWorld.
 ```
-![Instantiation](/src/instantiation.jpg)
+![Instantiation](/img/instantiation.jpg)
 ---
 ### Reflection (25/29)
 You can inspect and change the system at runtime.
