@@ -17,10 +17,10 @@ ProfStef next.
 ### Doing (2/29)
 Cool! (I like to say Cooool :) ). You've just executed a Pharo expression. More precisely, you sent the message 'next' to ProfStef class (it's me!).
 
-Note you can run this tutorial again by evaluating: 'ProfStef go'. 
-'ProfStef previous' returns to the previous lesson.
+Note you can run this tutorial again by evaluating: `ProfStef go`. 
+`ProfStef previous` returns to the previous lesson.
 
-You can also Do it using the keyboard shortcut 'Ctrl + D' (or 'Cmd + D' on MacOS). 
+You can also Do it using the keyboard shortcut `Ctrl + D` (or `Cmd + D` on MacOS). 
 
 Try to evaluate these expressions:
 
@@ -47,7 +47,7 @@ For example, select the text below, open the menu and click on 'Print it':
 
 You've seen the keyboard keys next to the 'Print it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
 
-Try 'Ctrl + P' (or 'Cmd + P') on the following expressions:
+Try `Ctrl + P` (or `Cmd + P`) on the following expressions:
 
 ```smalltalk
 Date today. "Output: 23 January 2022"
@@ -79,7 +79,7 @@ For example, select the text below, open the menu and click on 'Inspect it':"
 
 You've seen the keyboard keys next to the 'Inspect it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
 
-Try 'Ctrl + I' (or 'Cmd + I') on the following expressions:
+Try `Ctrl + I` (or `Cmd + I`) on the following expressions:
 
 ```smalltalk
 DateAndTime today.
@@ -134,7 +134,7 @@ ProfStef next.
 ```
 ---
 ### Basic Types: Characters (6/29)
-A Character can be instantiated using $ operator:
+A Character can be instantiated using `$` operator:
 ```smalltalk
 $A. "Output: $A"
 ```
@@ -187,7 +187,7 @@ ProfStef next.
 ### Basic Types: Symbols (8/29)
 A Symbol is a String which is guaranteed to be globally unique. 
 
-There is one and only one Symbol #ProfStef. There may be several 'ProfStef' String objects.
+There is one and only one Symbol `#ProfStef`. There may be several 'ProfStef' String objects.
 
 (Message == returns true if the two objects are the SAME)
 ```smalltalk
@@ -248,7 +248,7 @@ Dynamic Arrays are created at execution time:
 Messages are sent to objects. There are three types of message: unary, binary and keyword.
 
 Unary messages have the following form:
-    anObject aMessage 
+    `anObject aMessage`
 
 You've already sent unary messages. For example:
 
@@ -274,7 +274,7 @@ ProfStef next.
 ---
 ### Message syntax: Binary messages (12/29)
 Binary messages have the following form:
-    anObject + anotherObject
+    `anObject + anotherObject`
 ```smalltalk
 3 * 2. 6
 ```
@@ -308,7 +308,7 @@ ProfStef next.
 ---
 ### Message syntax: Keyword messages (13/29)
 Keyword messages are messages with arguments. They have the following form:
-    anObject akey: anotherObject akey2: anotherObject2
+    `anObject akey: anotherObject akey2: anotherObject2`
 ```smalltalk
 4 between: 0 and: 10. "Output: true"
 ```
@@ -319,7 +319,7 @@ Keyword messages are messages with arguments. They have the following form:
 ```smalltalk
 Color r:1 g:0 b:0. "Output: Color red"
 ```
-The message is r:g:b: implemented on class Color. Note you can also write
+The message is `r:g:b:` implemented on class Color. Note you can also write
 ```smalltalk
 Color
 	r:1
@@ -331,7 +331,7 @@ ProfStef perform: #next. "Same as ProfStef next."
 ```
 ### Message syntax: Execution order (14/29)
 Unary messages are executed first, then binary messages and finally keyword messages:
-    Unary > Binary > Keywords
+    `Unary > Binary > Keywords`
 ```smalltalk
 2 + 3 squared. "Output: 11"
 ```
@@ -595,7 +595,7 @@ SimpleButtonMorph new
 ### Reflection (25/29)
 You can inspect and change the system at runtime.
 
-Take a look at method #ifFalse:ifTrue: source code of class True:
+Take a look at method `#ifFalse:ifTrue:` source code of class True:
 ```smalltalk
 (True>>#ifFalse:ifTrue:) sourceCode.
 ```
@@ -652,7 +652,7 @@ ProfStef next.
 ### Debugger (28/29)
 The Debugger may be the most famous tool of Smalltalk environments. It will open as soon as an unmanaged Exception occurs. 
 
-The following code will open the debugger on the message stack, select PharoSyntaxTutorial>>divideTwoByZero
+The following code will open the debugger on the message stack, select `PharoSyntaxTutorial>>divideTwoByZero`
 ```smalltalk
 PharoSyntaxTutorial new divideTwoByZero.
 ```
