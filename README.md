@@ -560,25 +560,26 @@ Here we want to print all the numbers on the Transcript (a console)
 ```
 Some other really nice iterators
 ```smalltalk
-#(11 38 3 -2 10) collect: [:each | each abs]. "Output: #(11 38 3 2 10)"
+#(11 38 3 -2 10) collect: [:each | each abs]. "Output: #(11 38 3 2 10) - take the absolute value of each number"
 ```
 ```smalltalk
-#(11 38 3 -2 10) collect: [:each | each odd]. "Output: #(true false true false false)"
+#(11 38 3 -2 10) collect: [:each | each odd]. "Output: #(true false true false false) - whether each number is odd"
 ```
 ```smalltalk
-#(11 38 3 -2 10) select: [:each | each odd]. "Output: #(11 3)"
+#(11 38 3 -2 10) select: [:each | each odd]. "Output: #(11 3) - select only odd numbers"
 ```
 ```smalltalk
-#(11 38 3 -2 10) select: [:each | each > 10]. "Output: #(11 38)"
+#(11 38 3 -2 10) select: [:each | each > 10]. "Output: #(11 38) - select numbers greater than 10"
 ```
 ```smalltalk
-#(11 38 3 -2 10) reject: [:each | each > 10]. "Output: #(3 -2 10)"
+#(11 38 3 -2 10) reject: [:each | each > 10]. "Output: #(3 -2 10) - eliminate numbers greater than 10"
 ```
 ```smalltalk
 #(11 38 3 -2 10) 
      do: [:each | Transcript show: each printString]
-     separatedBy: [Transcript show: '.']. "Output: #(11 38 3 -2 10)"
+     separatedBy: [Transcript show: '.']. "11.38.3.-2.10 <-- prints each number on the Transcript with a '.' in between them"
 ```
+
 ```smalltalk
 ProfStef allInstances do: [:aPharoTutorial | aPharoTutorial next]. "Same as ProfStef next."
 ```
