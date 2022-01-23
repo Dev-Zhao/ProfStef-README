@@ -592,7 +592,7 @@ SimpleButtonMorph new
 	actionSelector: #value;
 	openCenteredInWorld.
 ```
-![Instantiation](src/instantiation.jpg)
+![Instantiation](/src/instantiation.jpg)
 ---
 ### Reflection (25/29)
 You can inspect and change the system at runtime.
@@ -647,6 +647,7 @@ You see, ProfStef class has a lot of objects. Let's take a look at my code:
 ```smalltalk
 ProfStef browse.
 ```
+![ProfStef][/img/ProfStef.jpg]
 ```smalltalk
 ProfStef next.
 ```
@@ -658,6 +659,7 @@ The following code will open the debugger on the message stack, select `PharoSyn
 ```smalltalk
 PharoSyntaxTutorial new divideTwoByZero.
 ```
+![Debug](/img/Debug.jpg)
 ---
 ### Tutorial Done (29/29)
 This tutorial is done. Enjoy programming with Pharo. 
