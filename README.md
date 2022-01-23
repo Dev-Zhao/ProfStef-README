@@ -368,3 +368,30 @@ ProfStef next.
 ```smalltalk
 ProfStef next.
 ```
+---
+### Mathematical Precendence (16/29)
+"Traditional precedence rules from mathematics do not apply in Pharo."
+```smalltalk
+2 * 10 + 2. "Output: 22"
+```
+"Here the message * is sent to 2, which answers 20, then 20 receive the message +
+
+Remember that all messages always follow a simple left-to-right precedence rule, * without exceptions *."
+```smalltalk
+2 + 2 * 10. "Output: 40"
+```
+```smalltalk
+2 + (2 * 10). "Output: 22"
+```
+```smalltalk
+8 - 5 / 2. "Output: (3/2)"
+```
+```smalltalk
+(8 - 5) / 2. "Output: (3/2)"
+```
+```smalltalk
+8 - (5 / 2). "Output: (11/2)"
+```
+```smalltalk
+ProfStef next.
+```
