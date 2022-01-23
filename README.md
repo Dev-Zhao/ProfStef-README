@@ -68,3 +68,26 @@ ProfStef next.
 ```
 ---
 ### Inspecting (4/29)
+"Now you're a Do it and Print it master! Let's talk about inspecting. It's a Do it which opens an Inspector on the result of evaluating the expression you've selected. 
+The Inspector is a tool that allows you to have a look inside an object.
+
+For example, select the text below, open the menu and click on 'Inspect it':"
+
+1 / 2.
+
+"You've seen the keyboard keys next to the 'Inspect it'? It indicates the Ctrl- (or Cmd-) shortcut to execute this command.
+
+Try 'Ctrl + I' (or 'Cmd + I') on the following expressions:"
+
+```smalltalk
+DateAndTime today.
+```
+```smalltalk
+Float pi.
+```
+```smalltalk
+SystemVersion current.
+```
+```smalltalk
+ProfStef next.
+```
