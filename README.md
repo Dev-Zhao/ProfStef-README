@@ -659,7 +659,7 @@ The following code will open the debugger on the message stack, select `PharoSyn
 ```smalltalk
 PharoSyntaxTutorial new divideTwoByZero.
 ```
-![Debug](/img/Debug.jpg)
+![Debug](/img/debug.jpg)
 ---
 ### Tutorial Done (29/29)
 This tutorial is done. Enjoy programming with Pharo. 
