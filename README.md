@@ -647,7 +647,7 @@ You see, ProfStef class has a lot of objects. Let's take a look at my code:
 ```smalltalk
 ProfStef browse.
 ```
-![ProfStef][/img/ProfStef.jpg]
+![ProfStef](/img/ProfStef.jpg)
 ```smalltalk
 ProfStef next.
 ```
