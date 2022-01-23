@@ -318,7 +318,7 @@ ProfStef next.
 ```smalltalk
 Color r:1 g:0 b:0. "Output: Color red"
 ```
-"The message is r:g:b: implemented on class Color. Note you can also write"
+"The message is r:g::b: implemented on class Color. Note you can also write"
 ```smalltalk
 Color
 	r:1
