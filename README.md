@@ -475,3 +475,44 @@ b value: 12. "Output: 14"
 ```smalltalk
 ProfStef next.
 ```
+---
+### Conditionals (21/29)
+"Conditionals are just messages sent to Boolean objects"
+```smalltalk
+1 < 2
+  ifTrue: [100]
+  ifFalse: [42]. "Output: 100"
+```
+"Here the message is ifTrue:ifFalse:
+
+Try this:"
+```smalltalk
+Transcript open.
+
+3 > 10 
+	ifTrue: [Transcript show: 'Maybe there''s a bug ....']
+	ifFalse: [Transcript show: 'No: 3 is less than 10'].
+```
+```smalltalk
+3 = 3 ifTrue: [ProfStef next]. "Same as ProfStef next."
+```
+---
+### Loops (22/29)
+"Loops are high-level collection iterators, implemented as regular methods."
+
+"Basic loops:
+  to:do:
+  to:by:do:
+"
+```smalltalk
+1 to: 100 do: [:i | Transcript show: i asString; cr]. "Prints number 1-100 (inclusive) with a newline(cr) after each number on the Transcript"
+```
+```smalltalk
+1 to: 100 by: 3 do: [:i | Transcript show: i asString; cr]. "Prints number 1, 4, 7, 10, ... 100 (inclusive) with a newline(cr) after each number on the Transcript"
+```
+```smalltalk
+100 to: 0 by: -2 do: [:i | Transcript show: i asString; cr]. "Prints number 100, 98, 96, 94, ... 0 (inclusive) with a newline(cr) after each number on the Transcript"
+```
+```smalltalk
+1 to: 1 do: [:i | ProfStef next]. "Same as ProfStef next." 
+```
