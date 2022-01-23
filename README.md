@@ -151,9 +151,56 @@ Character space. "Output: Character space"
 ```
 "You can print all 256 characters of the ASCII extended set:"
 ```smalltalk
-Character allByteCharacters. "Output: Characters Not supported on README"
+Character allByteCharacters.
 ```
 ```smalltalk
 ProfStef next.
 ```
 ---
+### Basic Types: Strings (7/29)
+"A String is a collection of characters. Use single quotes to create a String object. Print these expressions:"
+```smalltalk
+'ProfStef'. "Output: 'ProfStef'"
+```
+```smalltalk
+'ProfStef' size. "Output: 8"
+```
+```smalltalk
+'abc' asUppercase. "Output: 'ABC'"
+```
+```smalltalk
+'Hello World' reverse. "Output: 'dlroW olleH'"
+```
+"You can access each character using at: message"
+```smalltalk
+'ProfStef' at: 1. "Output: $P"
+```
+"String concatenation uses the comma operator:"
+```smalltalk
+'ProfStef', ' is cool'. "Output: 'ProfStef is cool'"
+```
+```smalltalk
+ProfStef next.
+```
+---
+### Basic Types: Symbols (8/29)
+"A Symbol is a String which is guaranteed to be globally unique. 
+
+There is one and only one Symbol #ProfStef. There may be several 'ProfStef' String objects.
+
+(Message == returns true if the two objects are the SAME)"
+```smalltalk
+'ProfStef' asSymbol. "Output: #ProfStef"
+```
+```smalltalk
+#ProfStef asString. "Output: 'ProfStef'"
+```
+```smalltalk
+(2 asString) == (2 asString). "Output: false"
+```
+```smalltalk
+(2 asString) asSymbol == (2 asString) asSymbol. "Output: true"
+```
+```smalltalk
+(Smalltalk globals at: #ProfStef) next. "Same as ProfStef next."
+```
