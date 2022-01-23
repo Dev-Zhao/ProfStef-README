@@ -461,3 +461,17 @@ Here is a block that adds 2 to its argument (its argument is named x):"
 [ProfStef next] value. "Same as ProfStef next."
 ```
 ---
+### Block assignation (20/29)
+"Blocks can be assigned to a variable then executed later.
+
+Note that |b| is the declaration of a variable named 'b' and that ':=' assigns a value to a variable.
+
+Select the three lines then Print it:"
+```smalltalk
+|b|
+b := [:x | x+2].
+b value: 12. "Output: 14"
+```
+```smalltalk
+ProfStef next.
+```
